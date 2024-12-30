@@ -223,6 +223,7 @@ class _AddTaskScreenState extends ConsumerState<AddTaskScreen> {
       description: _descriptionController.text.trim(),
       date: _dateController.text,
       priority: dropdownValue,
+      isCompleted: false,
     );
 
     await ref.read(tasksProvider.notifier).updateTask(updatedTask);
